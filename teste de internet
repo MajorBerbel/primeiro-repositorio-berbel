@@ -1,0 +1,12 @@
+import speedtest
+
+def testar_velocidade_internet():
+    velocidade_teste = speedtest.Speedtest()
+    print("Testando a velocidade de download...")
+    velocidade_download = velocidade_teste.download() / 10**6
+    print("Velocidade de download: {:.2f} Mbps".format(velocidade_download))
+    print("Testando a velocidade de upload...")
+    velocidade_upload = velocidade_teste.upload() / 10**6
+    print("Velocidade de upload: {:.2f} Mbps".format(velocidade_upload))
+
+testar_velocidade_internet()
